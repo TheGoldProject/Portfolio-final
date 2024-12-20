@@ -22,6 +22,7 @@ const eslintConfig = [
       "@typescript-eslint/no-empty-object-type": "off",
       "prefer-const": "off",
       "react-hooks/exhaustive-deps": "off",
+      "react/no-unescaped-entities": "off",
       "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/ban-ts-comment": "off",
     },
