@@ -8,7 +8,7 @@ import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progr
 import NumberTicker from "@/components/ui/number-ticker";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import Image from "next/image";
-import MyImg from "/public/projects/Gempad.png";
+import MyImg from "/public/projects/gempad.png";
 import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
 const features = [
   {
