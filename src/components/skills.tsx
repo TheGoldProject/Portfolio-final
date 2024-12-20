@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { DATA } from "@/data/resume";
+// import { DATA } from "@/data/resume";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import Marquee from "@/components/ui/marquee";
 import { Star, StarIcon, Stars } from "lucide-react";
@@ -35,6 +35,35 @@ type Skills = {
   [category: string]: string[];
 };
 
+const DATA: { skills: Skills } = {
+  skills: {
+    Languages: ["JavaScript", "TypeScript", "Solidity", "Rust", "Python"],
+    Blockchain: [
+      "Smart Contracts",
+      "OpenZeppelin",
+      "Ethereum",
+      "Solana",
+      "Web3.js",
+      "Ethers.js",
+      "NFT",
+      "Hardhat",
+      "Truffle",
+      "Canache",
+    ],
+    Frontend: [
+      "React.js",
+      "Next.js",
+      "Vue.js",
+      "HTML5",
+      "CSS3",
+      "TailwindCSS",
+      "SASS",
+    ],
+    Backend: ["Node.js", "Express", "GraphQL", "REST API", "OAuth"],
+    Database: ["MongoDB Atlas", "MySQL", "PostgreSQL", "Redis"],
+    Tools: ["Git", "Docker", "AWS", "Agile/Scrum Methodologies"],
+  },
+};
 export default function Skills() {
   return (
     <div className="relative bg-background mt-20">
