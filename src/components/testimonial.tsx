@@ -2,13 +2,10 @@ import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import Marquee from "@/components/ui/marquee";
-import { Star, StarIcon, Stars } from "lucide-react";
+import { StarFilledIcon } from "@radix-ui/react-icons";
+import MyImg from "/public/me.jpg";
+import Image from "next/image";
 
-const firstRow = DATA.testimonials.slice(0, DATA.testimonials.length / 3);
-const secondRow = DATA.testimonials.slice(
-  DATA.testimonials.length / 3,
-  (DATA.testimonials.length / 3) * 2
-);
 const thirdRow = DATA.testimonials.slice((DATA.testimonials.length / 3) * 2);
 
 const ReviewCard = ({
@@ -16,34 +13,58 @@ const ReviewCard = ({
   role,
   company,
   text,
+  avatar,
 }: {
   name: string;
   role: string;
   company: string;
   text: string;
+  avatar: string;
 }) => {
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative w-80 cursor-pointer overflow-hidden rounded-xl border p-5",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
-      <div className="flex flex-row justify-between gap-2">
-        {/* <img className="rounded-full" width="32" height="32" alt="" src={img} /> */}
+      <div className="flex flex-row items-center gap-2">
+        <Image
+          className="rounded-full"
+          width={36}
+          height={36}
+          alt=""
+          src={`/clients/${avatar}`}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{role}</p>
+          <p className="text-xs font-medium dark:text-white/40">
+            {role} at {company}
+          </p>
         </div>
-        <div className="text-cyan-400">{company}</div>
-        {/* <Star /><StarIcon /><Stars /> */}
+        {/* <div className="flex flex-col">
+          <div className="flex gap-1">
+            <StarFilledIcon color="#f59e0b" />
+            <StarFilledIcon color="#f59e0b" />
+            <StarFilledIcon color="#f59e0b" />
+            <StarFilledIcon color="#f59e0b" />
+            <StarFilledIcon color="#f59e0b" />
+          </div>
+        </div> */}
       </div>
-      <blockquote className="mt-2 text-sm line-clamp-3">{text}</blockquote>
+      <blockquote className="mt-2 text-sm">{text}</blockquote>
+      <div className="flex gap-1 mt-2">
+        <StarFilledIcon color="#f5e510" />
+        <StarFilledIcon color="#f5e510" />
+        <StarFilledIcon color="#f5e510" />
+        <StarFilledIcon color="#f5e510" />
+        <StarFilledIcon color="#f5e510" />
+      </div>
     </figure>
   );
 };
@@ -57,17 +78,7 @@ export default function Testimonial() {
       />
       <div className="flex flex-col w-full items-center justify-center overflow-hidden rounded-lg bg-background h-[500px]">
         <Marquee className="[--duration:20s]">
-          {firstRow.map((review) => (
-            <ReviewCard key={review.name} {...review} />
-          ))}
-        </Marquee>
-        <Marquee reverse className="[--duration:20s]">
-          {secondRow.map((review) => (
-            <ReviewCard key={review.name} {...review} />
-          ))}
-        </Marquee>
-        <Marquee className="[--duration:20s]">
-          {thirdRow.map((review) => (
+          {DATA.testimonials.map((review) => (
             <ReviewCard key={review.name} {...review} />
           ))}
         </Marquee>

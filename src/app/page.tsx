@@ -1,10 +1,9 @@
-import Image from "next/image";
-import MarqueeDemo from "@/components/demo";
 import Hero from "@/components/hero"
 import Testimonial from "@/components/testimonial";
 import Skills from "@/components/skills";
 import Achievements from "@/components/achievements";
 import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -14,6 +13,7 @@ export default function Home() {
      <Skills />
      <Achievements />
      <Projects />
-    </div>
+     <Contact />
+    </div> 
   );
 }

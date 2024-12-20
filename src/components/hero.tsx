@@ -6,11 +6,14 @@ import BoxReveal from "@/components/ui/box-reveal";
 import WordRotate from "@/components/ui/word-rotate";
 import ShinyButton from "@/components/ui/shiny-button";
 import { DATA } from "@/data/resume";
+import FlickeringGrid from "@/components/ui/flickering-grid";
+import Image from "next/image";
+import MyImg from "/public/me.jpg";
 
 export default function Hero() {
   return (
-    <div className="relative flex w-full h-[500px] items-start justify-center overflow-hidden rounded-lg bg-background p-20">
-      <div className="flex items-center justify-center gap-10">
+    <div className="relative flex w-full h-[800px] items-center justify-center overflow-hidden rounded-lg bg-background p-20">
+      <div className="flex items-center justify-center gap-20 z-10">
         <div className="flex flex-col">
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <SparklesText text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`} />
@@ -40,17 +43,15 @@ export default function Hero() {
             </BoxReveal>
           </div>
         </div>
-        <p>My Photo</p>
+        <Image src={MyImg} width={300} height={300} className="rounded-full" alt="me" />
       </div>
-      <AnimatedGridPattern
-        numSquares={30}
-        maxOpacity={0.1}
-        duration={3}
-        repeatDelay={1}
-        className={cn(
-          "[mask-image:radial-gradient(800px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
-        )}
+      <FlickeringGrid
+        className="z-0 absolute inset-0 size-full [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
+        squareSize={4}
+        gridGap={6}
+        color="#6B7280"
+        maxOpacity={0.5}
+        flickerChance={0.1}
       />
     </div>
   );

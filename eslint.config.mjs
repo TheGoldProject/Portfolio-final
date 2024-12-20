@@ -11,6 +11,21 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // Add your custom rules here
+      // "no-console": "warn", // Warn when `console.log` is used
+      // "semi": ["error", "always"], // Enforce semicolons
+      // "quotes": ["error", "single"], // Enforce single quotes
+      "@typescript-eslint/no-unused-vars": "off", // Ignore unused variables starting with `_`
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "prefer-const": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
