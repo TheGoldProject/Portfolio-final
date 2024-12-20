@@ -13,22 +13,22 @@ export default function Achievements() {
         className="font-display text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Achievements"
       />
-      <div className="flex gap-10 justify-center mt-10">
+      <div className="flex gap-20 justify-center mt-10">
         <div className="flex flex-col items-center gap-5">
-          <NumberTicker className="text-5xl font-bold" value={8} />
-          <span className="text-2xl">Large scale Projects</span>
+          <NumberTicker className="text-7xl font-bold" value={8} />
+          <span className="text-md text-neutral-500">Large scale Projects</span>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <NumberTicker className="text-5xl font-bold" value={23} />
-          <span className="text-2xl">Completed Projects</span>
+          <NumberTicker className="text-7xl font-bold" value={23} />
+          <span className="text-md text-neutral-500">Completed Projects</span>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <NumberTicker className="text-5xl font-bold" value={5} />
-          <span className="text-2xl">Honors & Awards</span>
+          <NumberTicker className="text-7xl font-bold" value={5} />
+          <span className="text-md text-neutral-500">Honors & Awards</span>
         </div>
         <div className="flex flex-col items-center gap-5">
-          <NumberTicker className="text-5xl font-bold" value={10} />
-          <span className="text-2xl">Years of Experience</span>
+          <NumberTicker className="text-7xl font-bold" value={10} />
+          <span className="text-md text-neutral-500">Years of Experience</span>
         </div>
       </div>
     </div>

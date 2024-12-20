@@ -47,15 +47,6 @@ const ReviewCard = ({
             {role} at {company}
           </p>
         </div>
-        {/* <div className="flex flex-col">
-          <div className="flex gap-1">
-            <StarFilledIcon color="#f59e0b" />
-            <StarFilledIcon color="#f59e0b" />
-            <StarFilledIcon color="#f59e0b" />
-            <StarFilledIcon color="#f59e0b" />
-            <StarFilledIcon color="#f59e0b" />
-          </div>
-        </div> */}
       </div>
       <blockquote className="mt-2 text-sm">{text}</blockquote>
       <div className="flex gap-1 mt-2">
@@ -76,7 +67,7 @@ export default function Testimonial() {
         className="font-display text-center text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Hear from my clients"
       />
-      <div className="flex flex-col w-full items-center justify-center overflow-hidden rounded-lg bg-background h-[500px]">
+      <div className="flex flex-col w-full items-center justify-center overflow-hidden rounded-lg bg-background h-[300px]">
         <Marquee className="[--duration:20s]">
           {DATA.testimonials.map((review) => (
             <ReviewCard key={review.name} {...review} />

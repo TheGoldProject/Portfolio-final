@@ -10,6 +10,7 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import Image from "next/image";
 import MyImg from "/public/projects/gempad.png";
 import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
+import BlurFade from "@/components/ui/blur-fade";
 const features = [
   {
     Icon: StarIcon,
@@ -57,12 +58,24 @@ const features = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col items-center justify-center relative gap-10 bg-background mt-20">
-      <GradualSpacing
-        className="font-display text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
-        text="Featured Projects"
-      />
-      <BentoGrid className="lg:grid-rows-2 w-1/2">
+    <div className="flex flex-col items-center justify-center relative bg-background mt-20">
+      <BlurFade
+        className="font-display text-3xl font-bold  text-black dark:text-white md:text-5xl md:leading-[5rem]"
+        delay={0.25}
+        inView
+      >
+        Featured Projects
+      </BlurFade>
+      <BlurFade
+        className="text-center text-neutral-900 dark:text-neutral-500"
+        delay={0.25}
+        inView
+      >
+        I've worked on a variety of projects, from simple websites to complex{" "}
+        <br />
+        web applications. Here are a few of my favorites.
+      </BlurFade>
+      <BentoGrid className="my-10 lg:grid-rows-2 w-1/2">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}
