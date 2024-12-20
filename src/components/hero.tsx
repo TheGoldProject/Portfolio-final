@@ -66,11 +66,13 @@ export default function Hero() {
           flickerChance={0.1}
         />
       </div>
-      <VelocityScroll
-        text="I am always ready to make your project success."
-        default_velocity={3}
-        className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
-      />
+      <BlurFade delay={2} inView>
+        <VelocityScroll
+          text="I am always ready to make your project success."
+          default_velocity={3}
+          className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+        />
+      </BlurFade>
     </div>
   );
 }
