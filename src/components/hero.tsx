@@ -17,8 +17,7 @@ import { Mail, SquareArrowOutUpRight } from "lucide-react";
 import { Link, useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/transition-animations";
 import TextReveal from "@/components/ui/text-reveal";
-import Lottie from "lottie-react";
-import animationData from "../../public/lottie/3.json";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 export default function Hero() {
   const router = useTransitionRouter();
@@ -74,16 +73,10 @@ export default function Hero() {
             </div>
           </div>
           <BlurFade delay={0.25} inView>
-            {/* <Image
-              src={DATA.avatarUrl}
-              width={300}
-              height={300}
-              className="rounded-full"
-              alt="me"
-            /> */}
-            <Lottie
-              animationData={animationData} // Use animationData prop
-              loop={true}
+            <Player
+              autoplay
+              loop
+              src="/lottie/3.json" // Path to the JSON file in the public folder
               style={{ height: "500px", width: "500px" }}
             />
           </BlurFade>
