@@ -5,12 +5,12 @@ import Marquee from "@/components/ui/marquee";
 import { Star, StarIcon, Stars } from "lucide-react";
 import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";
 import NumberTicker from "@/components/ui/number-ticker";
-import MyImg from "/public/me.jpg";
+import MyImg from "/public/avatar/me.jpg";
 import Image from "next/image";
 
 export default function Education() {
   return (
-    <div className="flex flex-col items-center justify-center relative bg-background mt-20">
+    <div id="education" className="flex flex-col items-center justify-center relative bg-background mt-20">
       <GradualSpacing
         className="font-display text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Education"

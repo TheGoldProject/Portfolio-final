@@ -13,8 +13,9 @@ import {
   SiWhatsapp,
 } from "@icons-pack/react-simple-icons";
 import { Icons } from "@/components/icons";
-import MyImg from "/public/me.jpg";
 import BlurFade from "@/components/ui/blur-fade";
+import { DATA } from "@/data/resume";
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -46,11 +47,23 @@ export default function Contact() {
   const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="flex flex-col items-center justify-center relative bg-background mt-20">
+    <div
+      id="contact"
+      className="flex flex-col items-center justify-center relative bg-background pt-40"
+    >
+      <AnimatedGradientText>
+        <span
+          className={cn(
+            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent text-3xl`
+          )}
+        >
+          CONTACT
+        </span>
+      </AnimatedGradientText>
       <BlurFade
         delay={0.25}
         inView
-        className="text-5xl font-bold  text-black dark:text-white"
+        className="mt-10 text-5xl font-bold  text-black dark:text-white"
       >
         Get in touch
       </BlurFade>
@@ -90,7 +103,7 @@ export default function Contact() {
                 </Circle>
                 <Circle ref={div4Ref} className="size-16 p-0">
                   <Image
-                    src={MyImg}
+                    src={DATA.avatarUrl}
                     alt="me"
                     width={50}
                     height={50}

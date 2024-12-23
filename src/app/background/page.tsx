@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Hero from "@/components/hero"
+import Hero from "@/components/hero2"
 import Experiences from "@/components/experiences";
 import Education from "@/components/education";
 import Certifications from "@/components/certifications";

@@ -1,11 +1,6 @@
 import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 import { StarIcon, HeartIcon } from "@radix-ui/react-icons";
-import GradualSpacing from "@/components/ui/gradual-spacing";
-import Marquee from "@/components/ui/marquee";
-import { Star, Stars } from "lucide-react";
-import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";
-import NumberTicker from "@/components/ui/number-ticker";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import Image from "next/image";
 import MyImg from "/public/projects/gempad.png";
@@ -58,7 +53,7 @@ const features = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col items-center justify-center relative bg-background mt-20">
+    <div className="flex flex-col items-center justify-center relative bg-background pt-40">
       <BlurFade
         className="font-display text-3xl font-bold  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         delay={0.25}

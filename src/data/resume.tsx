@@ -1,17 +1,19 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
+import { SiTelegram } from "@icons-pack/react-simple-icons";
 
 export const DATA = {
-  name: "Jinyi Guo",
+  name: "Yurii Chepiha",
   initials: "DV",
-  url: "https://goldendev.vercel.app",
-  location: "Baltimore, MD",
-  locationLink: "https://www.google.com/maps/place/baltimore",
+  url: "https://yurii-goldendev.vercel.app",
+  location: "Dubno, Rivnenska",
+  locationLink: "https://www.google.com/maps/place/dubno",
   description:
-    "Web3 & Blockchain Engineer | Full-Stack Engineer. I love building things and helping people. Very active on Twitter.",
+    // "I am passionate about developing innovative solutions on decentralized networks, such as blockchain, and have strong expertise in creating engaging and dynamic front-end experiences for websites."
+    "I love building things on decentralized networks, such as blockchain. Also have strong expertise in creating engaging and dynamic front-end experiences for websites.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
+    "At the end of 2024, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+  avatarUrl: "/avatar/me.jpg",
   // skills: [
   //   "React.js",
   //   "Next.js",
@@ -38,42 +40,226 @@ export const DATA = {
   //   "Metaplex",
   //   "NFT",
   // ],
+  // skills: {
+  //   Languages: ["JavaScript", "TypeScript", "Solidity", "Rust", "Python"],
+  //   Blockchain: [
+  //     "Smart Contracts",
+  //     "OpenZeppelin",
+  //     "Ethereum",
+  //     "Solana",
+  //     "Web3.js",
+  //     "Ethers.js",
+  //     "NFT",
+  //     "Hardhat",
+  //     "Truffle",
+  //     "Canache",
+  //   ],
+  //   Frontend: [
+  //     "React.js",
+  //     "Next.js",
+  //     "Vue.js",
+  //     "HTML5",
+  //     "CSS3",
+  //     "TailwindCSS",
+  //     "SASS",
+  //   ],
+  //   Backend: ["Node.js", "Express", "GraphQL", "REST API", "OAuth"],
+  //   Database: ["MongoDB Atlas", "MySQL", "PostgreSQL", "Redis"],
+  //   Tools: ["Git", "Docker", "AWS", "Agile/Scrum Methodologies"],
+  // },
   skills: {
-    Languages: ["JavaScript", "TypeScript", "Solidity", "Rust", "Python"],
+    Languages: [
+      {
+        label: "JavaScript",
+        icon: "javascript",
+        color: "#F7DF1E",
+      },
+      {
+        label: "TypeScript",
+        icon: "typescript",
+        color: "#3178C6",
+      },
+      {
+        label: "Solidity",
+        icon: "solidity",
+        color: "#363636",
+      },
+      {
+        label: "Rust",
+        icon: "rust",
+        color: "#000000",
+      },
+      {
+        label: "Python",
+        icon: "python",
+        color: "#3776AB",
+      },
+    ],
     Blockchain: [
-      "Smart Contracts",
-      "OpenZeppelin",
-      "Ethereum",
-      "Solana",
-      "Web3.js",
-      "Ethers.js",
-      "NFT",
-      "Hardhat",
-      "Truffle",
-      "Canache",
+      {
+        label: "Ethereum",
+        icon: "ethereum",
+        color: "#3C3C3D",
+      },
+      {
+        label: "Solana",
+        icon: "solana",
+        color: "#9945FF",
+      },
+      {
+        label: "Web3.js",
+        icon: "web3dotjs",
+        color: "#F16822",
+      },
+      {
+        label: "Ethers.js",
+        icon: "ethers",
+        color: "#2535A0",
+      },
+      {
+        label: "OpenZeppelin",
+        icon: "openzeppelin",
+        color: "#4E5EE4",
+      },
+      {
+        label: "Ethers.js",
+        icon: "ethers",
+        color: "#2535A0",
+      },
+      {
+        label: "Ethers.js",
+        icon: "ethers",
+        color: "#2535A0",
+      },
+      // "Smart Contracts",
+      // "NFT",
+      // "Hardhat",
+      // "Truffle",
+      // "Canache",
     ],
     Frontend: [
-      "React.js",
-      "Next.js",
-      "Vue.js",
-      "HTML5",
-      "CSS3",
-      "TailwindCSS",
-      "SASS",
+      {
+        label: "React.js",
+        icon: "react",
+        color: "#61DAFB",
+      },
+      {
+        label: "Next.js",
+        icon: "nextdotjs",
+        color: "#000000",
+      },
+      {
+        label: "Vue.js",
+        icon: "vuedotjs",
+        color: "#4FC08D",
+      },
+      {
+        label: "HTML5",
+        icon: "html5",
+        color: "#E34F26",
+      },
+      {
+        label: "CSS3",
+        icon: "css3",
+        color: "#1572B6",
+      },
+      {
+        label: "TailwindCSS",
+        icon: "tailwindcss",
+        color: "#06B6D4",
+      },
+      {
+        label: "Sass",
+        icon: "sass",
+        color: "#CC6699",
+      },
     ],
-    Backend: ["Node.js", "Express", "GraphQL", "REST API", "OAuth"],
-    Database: ["MongoDB Atlas", "MySQL", "PostgreSQL", "Redis"],
-    Tools: ["Git", "Docker", "AWS", "Agile/Scrum Methodologies"],
+    Backend: [
+      {
+        label: "Node.js",
+        icon: "nodedotjs",
+        color: "#5FA04E",
+      },
+      {
+        label: "Express",
+        icon: "express",
+        color: "#000000",
+      },
+      {
+        label: "GraphQL",
+        icon: "graphql",
+        color: "#E10098",
+      },
+      {
+        label: "Auth0",
+        icon: "auth0",
+        color: "#EB5424",
+      },
+    ],
+    Database: [
+      {
+        label: "MongoDB",
+        icon: "mongodb",
+        color: "#47A248",
+      },
+      {
+        label: "MySQL",
+        icon: "mysql",
+        color: "#4479A1",
+      },
+      {
+        label: "PostgreSQL",
+        icon: "postgresql",
+        color: "#4169E1",
+      },
+      {
+        label: "Redis",
+        icon: "redis",
+        color: "#FF4438",
+      },
+      // "MongoDB Atlas",
+      // "MySQL",
+      // "PostgreSQL",
+      // "Redis",
+    ],
+    Tools: [
+      {
+        label: "Git",
+        icon: "git",
+        color: "#F05032",
+      },
+      {
+        label: "GitHub",
+        icon: "github",
+        color: "#181717",
+      },
+      {
+        label: "Docker",
+        icon: "docker",
+        color: "#2496ED",
+      },
+      {
+        label: "AWS",
+        icon: "amazonwebservices",
+        color: "#232F3E",
+      },
+      // "Git",
+      // "Docker",
+      // "AWS",
+      // "Agile/Scrum Methodologies",
+    ],
   },
+
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/#skill", icon: HomeIcon, label: "Skill" },
     { href: "/project", icon: NotebookIcon, label: "Project" },
     { href: "/background", icon: NotebookIcon, label: "Background" },
+    { href: "/background#work", icon: NotebookIcon, label: "Work" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
+    email: "chepiha.yura@outlook.com",
     tel: "+123456789",
     social: {
       GitHub: {
@@ -84,42 +270,29 @@ export const DATA = {
         navbar: true,
       },
       Telegram: {
-        name: "GitHub",
-        url: "https://github.com/TheGoldProject",
-        icon: Icons.github,
+        name: "Telegram",
+        url: "https://t.me/goldendev726",
+        icon: SiTelegram,
 
         navbar: true,
       },
-      Discord: {
-        name: "GitHub",
-        url: "https://github.com/TheGoldProject",
-        icon: Icons.github,
+      // Discord: {
+      //   name: "Discord",
+      //   url: "https://github.com/TheGoldProject",
+      //   icon: Icons.github,
 
-        navbar: true,
-      },
+      //   navbar: true,
+      // },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin/in/alphaweb3dev",
+        url: "https://www.linkedin.com/in/yura-chepiha-4675465489/", //4671b4343
         icon: Icons.linkedin,
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: false,
-      },
-      // Youtube: {
-      //   name: "Youtube",
-      //   url: "https://dub.sh/dillion-youtube",
-      //   icon: Icons.youtube,
-      //   navbar: true,
-      // },
       email: {
         name: "Send Email",
-        url: "alphaweb3.dev@gmail.com",
+        url: "chepiha.yura@outlook.com",
         icon: Icons.email,
 
         navbar: false,
@@ -127,78 +300,61 @@ export const DATA = {
     },
   },
 
+  links: {
+    resume: "https://bit.ly/yura-resume",
+    telegram: "https://t.me/goldendev726",
+    linkedin: "https://www.linkedin.com/in/yura-chepiha-4675465489/",
+    github: "https://github.com/TheGoldProject",
+  },
+
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Gempad",
+      href: "https://gempad.app",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Senior Blockchain Engineer",
+      logoUrl: "/projects/gempad.png",
+      start: "Jul 2023",
+      end: "Sep 2024",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Developed and optimized highly scalable and user-friendly web applications for 10k+ crypto token launches and presales on multiple blockchain networks, including Ethereum, BSC, Polygon, and 10+ others. Built and managed APIs and services with Node.js, Express, and MongoDB, ensuring 99.9% uptime and seamless data flow across the platform. Integrated blockchain technologies like Web3.js and ethers.js, enabling secure and efficient smart contract interactions for over $10M in transactions.",
     },
     {
-      company: "Shopify",
+      company: "StrikeX",
+      href: "https://strikex.com",
       badges: [],
-      href: "https://shopify.com",
       location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      title: "Senior Full-Stack Developer",
+      logoUrl: "/projects/strikex.png",
+      start: "Mar 2022",
+      end: "Jun 2023",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Delivered 15+ highly responsive user interfaces using React.js, Next.js, and modern JavaScript frameworks, increasing engagement by 35%. Created and refined multichain wallet interfaces for managing cryptocurrency assets, boosting transaction efficiency by 30% and supporting 10,000+ users. Conducted 50+ code reviews, authored technical documentation, and mentored junior developers, enhancing team productivity by 20%.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
+      company: "S-PRO",
+      href: "https://s-pro.io/",
       badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
+      location: "Ukraine",
+      title: "Senior Frontend Developer",
+      logoUrl: "/projects/s-pro.jpg",
+      start: "Nov 2020",
+      end: "Dec 2021",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
+        "Led the development of highly responsive and scalable front-end solutions for fintech and healthcare applications using React.js, TypeScript, and Redux. Implemented robust unit and integration testing using Jest and React Testing Library, ensuring high code quality and reliability. Mentored junior developers and conducted code reviews, fostering a culture of continuous improvement and knowledge sharing.",
     },
     {
-      company: "Splunk",
-      href: "https://splunk.com",
+      company: "Light IT",
+      href: "https://light-it.net/",
       badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
+      location: "Ukraine",
+      title: "Junior Frontend Engineer",
+      logoUrl: "/projects/light-it.jpg",
+      start: "May 2019",
+      end: "Oct 2020",
       description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+        "Collaborated with the development team to build responsive and user-friendly interfaces using HTML, CSS, and JavaScript.Implemented RESTful API integrations to dynamically display data on the front end. Conducted performance optimization to improve page loading speeds and responsiveness.",
     },
   ],
   education: [
@@ -211,28 +367,12 @@ export const DATA = {
       end: "2024",
     },
     {
-      school: "University of Toronto",
+      school: "Taras Shevchenko National University of Kyiv",
       href: "https://uwaterloo.ca",
       degree: "Bachelor's Degree of Computer Science (BCS)",
       logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      start: "2015",
+      end: "2019",
     },
   ],
   projects: [
@@ -502,268 +642,27 @@ export const DATA = {
         },
       ],
     },
-    {
-      title: "Stupid Hack Toronto",
-      dates: "July 23rd, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a chrome extension which tracks which facebook profiles you have visited and immediately texts your girlfriend if you visited another girls page.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/stupid-hackathon.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/nsagirlfriend/nsagirlfriend",
-        },
-      ],
-    },
-    {
-      title: "Global AI Hackathon - Toronto",
-      dates: "June 23rd - 25th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a python library which can be imported to any python game and change difficulty of the game based on real time emotion of player. Uses OpenCV and webcam for facial recognition, and a custom Machine Learning Model trained on a [Kaggle Emotion Dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard) using [Tensorflow](https://www.tensorflow.org/Tensorflow) and [Keras](https://keras.io/). This project recieved 1st place prize at the Global AI Hackathon - Toronto and was also invited to demo at [NextAI Canada](https://www.nextcanada.com/next-ai).",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/global-ai-hackathon.jpg",
-      win: "1st Place Winner",
-      links: [
-        {
-          title: "Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://syncedreview.com/2017/06/26/global-ai-hackathon-in-toronto/",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/TinySamosas/",
-        },
-      ],
-    },
-    {
-      title: "McGill AI for Social Innovation Hackathon",
-      dates: "June 17th - 18th, 2017",
-      location: "Montreal, Quebec",
-      description:
-        "Developed realtime facial microexpression analyzer using AI",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/ai-for-social-good.jpg",
-      links: [],
-    },
-    {
-      title: "Open Source Circular Economy Days Hackathon",
-      dates: "June 10th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a custom admin interface for food waste startup <a href='http://genecis.co/'>Genecis</a> to manage their data and provide analytics.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/open-source-circular-economy-days.jpg",
-      win: "1st Place Winner",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/genecis",
-        },
-      ],
-    },
-    {
-      title: "Make School's Student App Competition 2017",
-      dates: "May 19th - 21st, 2017",
-      location: "International",
-      description: "Improved PocketDoc and submitted to online competition",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-      win: "Top 10 Finalist | Honourable Mention",
-      links: [
-        {
-          title: "Medium Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-        },
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "HackMining",
-      dates: "May 12th - 14th, 2017",
-      location: "Toronto, Ontario",
-      description: "Developed neural network to optimize a mining process",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
-      links: [],
-    },
-    {
-      title: "Waterloo Equithon",
-      dates: "May 5th - 7th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "SpaceApps Waterloo",
-      dates: "April 28th - 30th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed Earthwatch, a web application which allows users in a plane to virtually see important points of interest about the world below them. They can even choose to fly away from their route and then fly back if they choose. Special thanks to CesiumJS for providing open source world and plane models.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/space-apps.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/earthwatch",
-        },
-      ],
-    },
-    {
-      title: "MHacks 9",
-      dates: "March 24th - 26th, 2017",
-      location: "Ann Arbor, Michigan",
-      description:
-        "Developed Super Graphic Air Traffic, a VR website made to introduce people to the world of air traffic controlling. This project was built completely using THREE.js as well as a node backend server.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/mhacks-9.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/threejs-planes",
-        },
-      ],
-    },
-    {
-      title: "StartHacks I",
-      dates: "March 4th - 5th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed at StartHacks 2017, Recipic is a mobile app which allows you to take pictures of ingredients around your house, and it will recognize those ingredients using ClarifAI image recognition API and return possible recipes to make. Recipic recieved 1st place at the hackathon for best pitch and hack.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/starthacks.png",
-      win: "1st Place Winner",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-ionic",
-        },
-        {
-          title: "Source (Server)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-rails",
-        },
-      ],
-    },
-    {
-      title: "QHacks II",
-      dates: "February 3rd - 5th, 2017",
-      location: "Kingston, Ontario",
-      description:
-        "Developed a mobile game which enables city-wide manhunt with random lobbies",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/human-huntr-react-native",
-        },
-        {
-          title: "Source (API)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/human-huntr-rails",
-        },
-      ],
-    },
-    {
-      title: "Terrible Hacks V",
-      dates: "November 26th, 2016",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mock of Windows 11 with interesting notifications and functionality",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
-        },
-      ],
-    },
-    {
-      title: "Portal Hackathon",
-      dates: "October 29, 2016",
-      location: "Kingston, Ontario",
-      description:
-        "Developed an internal widget for uploading assignments using Waterloo's portal app",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/UWPortalSDK/crowmark",
-        },
-      ],
-    },
   ],
   testimonials: [
     {
       name: "Domen",
       role: "Co-Founder",
       company: "Gempad",
-      avatar: 'gempad.jpg',
+      avatar: "gempad.jpg",
       text: "I highly recommend Jinyi for React.js opportunities. At Gempad, he showed expertise in React.js and Next.js, delivering top-notch code. His eagerness to learn and tackle challenges made him invaluable. 👍",
     },
     {
       name: "Joe Jowett",
       role: "CEO & Co-founder",
       company: "StrikeX",
-      avatar: 'strikex.png',
+      avatar: "strikex.png",
       text: "He is very good with communication and experienced website developer, great experience to work with him.",
     },
     {
       name: "Ran Ma",
       role: "CTO & Co-Founder",
       company: "SuperBlocks",
-      avatar: 'superblocks.jpg',
+      avatar: "superblocks.jpg",
       text: "I highly endorse Jinyi for any role. His talent and work ethic are exceptional. At SuperBlocks, his professionalism and attention to detail were outstanding.",
     },
   ],

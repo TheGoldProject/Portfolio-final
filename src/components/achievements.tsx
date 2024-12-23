@@ -8,7 +8,7 @@ import NumberTicker from "@/components/ui/number-ticker";
 
 export default function Achievements() {
   return (
-    <div className="flex flex-col items-center justify-center relative bg-background mt-20">
+    <div className="flex flex-col items-center justify-center relative bg-background pt-40">
       <GradualSpacing
         className="font-display text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Achievements"

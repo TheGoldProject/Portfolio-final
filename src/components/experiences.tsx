@@ -9,7 +9,7 @@ import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progr
 import NumberTicker from "@/components/ui/number-ticker";
 import { MagicCard } from "@/components/ui/magic-card";
 import Image from "next/image";
-import MyImg from "/public/me.jpg";
+import MyImg from "/public/avatar/me.jpg";
 import ShineBorder from "@/components/ui/shine-border";
 
 export default function Experiences() {
