@@ -38,7 +38,7 @@ const features = [
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
-    background: <img className="absolute right-2 top-4 opacity-60" />,
+    background: <Image src={MyImg} alt="me" className="absolute !blur-[0px]" />,
   },
   {
     Icon: StarIcon,
@@ -47,7 +47,7 @@ const features = [
     className: "col-span-3 lg:col-span-1",
     href: "#",
     cta: "Learn more",
-    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+    background: <Image src={MyImg} alt="me" className="absolute !blur-[0px]" />,
   },
 ];
 

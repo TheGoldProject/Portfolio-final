@@ -97,7 +97,7 @@ export default function Skills() {
                     </span>
                     <div className="flex flex-wrap gap-10">
                       {DATA.skills[category].map((item, j) => (
-                        <Tooltip>
+                        <Tooltip key={j}>
                           <TooltipTrigger asChild>
                             {/* <span
                               key={j}
