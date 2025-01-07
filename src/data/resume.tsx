@@ -1,13 +1,24 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
-import { SiTelegram } from "@icons-pack/react-simple-icons";
+import { FileText, HomeIcon, NotebookIcon } from "lucide-react";
+import {
+  SiTelegram,
+  SiGithub,
+  SiLinkedin,
+} from "@icons-pack/react-simple-icons";
+
+const GITHUB_URL = "https://github.com/alphaweb3savvy";
+const LINKEDIN_URL = "https://www.linkedin.com/in/alphaweb3savvy";
+const TELEGRAM_URL = "https://t.me/goldendev726";
+const EMAIL_URL = "alphaweb3.savvy@gmail.com";
+const RESUME_URL = "https://bit.ly/alphaweb3savvy-resume";
+const PORTFOLIO_URL = "https://alphaweb3savvy.vercel.app";
 
 export const DATA = {
-  name: "Yurii Chepiha",
+  name: "Ethan Zhang",
   initials: "DV",
-  url: "https://yurii-goldendev.vercel.app",
-  location: "Dubno, Rivnenska",
-  locationLink: "https://www.google.com/maps/place/dubno",
+  url: PORTFOLIO_URL,
+  location: "San Gabriel, CA",
+  locationLink: "https://www.google.com/maps/place/sangabriel",
   description:
     // "I am passionate about developing innovative solutions on decentralized networks, such as blockchain, and have strong expertise in creating engaging and dynamic front-end experiences for websites."
     "I love building things on decentralized networks, such as blockchain. Also have strong expertise in creating engaging and dynamic front-end experiences for websites.",
@@ -259,19 +270,19 @@ export const DATA = {
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "chepiha.yura@outlook.com",
+    email: EMAIL_URL,
     tel: "+123456789",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/TheGoldProject",
+        url: GITHUB_URL,
         icon: Icons.github,
 
         navbar: true,
       },
       Telegram: {
         name: "Telegram",
-        url: "https://t.me/goldendev726",
+        url: TELEGRAM_URL,
         icon: SiTelegram,
 
         navbar: true,
@@ -285,14 +296,14 @@ export const DATA = {
       // },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/yura-chepiha-4675465489/", //4671b4343
+        url: LINKEDIN_URL,
         icon: Icons.linkedin,
 
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "chepiha.yura@outlook.com",
+        url: EMAIL_URL,
         icon: Icons.email,
 
         navbar: false,
@@ -300,11 +311,18 @@ export const DATA = {
     },
   },
 
+  footerLinks: [
+    { href: RESUME_URL, label: "Resume", icon: FileText },
+    { href: TELEGRAM_URL, label: "Telegram", icon: SiTelegram },
+    { href: LINKEDIN_URL, label: "LinkedIn", icon: SiLinkedin },
+    { href: GITHUB_URL, label: "GitHub", icon: SiGithub },
+  ],
+
   links: {
-    resume: "https://bit.ly/yura-resume",
-    telegram: "https://t.me/goldendev726",
-    linkedin: "https://www.linkedin.com/in/yura-chepiha-4675465489/",
-    github: "https://github.com/TheGoldProject",
+    resume: RESUME_URL,
+    telegram: TELEGRAM_URL,
+    linkedin: LINKEDIN_URL,
+    github: GITHUB_URL,
   },
 
   work: [
@@ -313,12 +331,18 @@ export const DATA = {
       href: "https://gempad.app",
       badges: [],
       location: "Remote",
-      title: "Senior Blockchain Engineer",
-      logoUrl: "/projects/gempad.png",
-      start: "Jul 2023",
-      end: "Sep 2024",
-      description:
-        "Developed and optimized highly scalable and user-friendly web applications for 10k+ crypto token launches and presales on multiple blockchain networks, including Ethereum, BSC, Polygon, and 10+ others. Built and managed APIs and services with Node.js, Express, and MongoDB, ensuring 99.9% uptime and seamless data flow across the platform. Integrated blockchain technologies like Web3.js and ethers.js, enabling secure and efficient smart contract interactions for over $10M in transactions.",
+      title: "Full Stack Lead, Blockchain",
+      logoUrl: "/experience/gempad.png",
+      start: "May 2022",
+      end: "Dec 2024",
+      description: [
+        "Led Gempad's protocol development, boosting system performance and enhancing user experience by 25%.",
+        "Architected and developed scalable and effcient solutions using Solidity for smart contracts and React.js for frontend applications.",
+        "Engineered smart contracts for Gempad's vaults and presales, increasing effciency and securing $1.5M+ in user funds.",
+        "Implemented Subgraph, cutting query times by 50% and providing real-time insights for Gempad.",
+        "Maintained backend systems with Node.js, TypeScript, and GraphQL, ensuring 97% uptime and serving 10k users daily.",
+        "Fostered collaboration, driving a 20% increase in liquidity and user adoption across decentralized exchanges.",
+      ],
     },
     {
       company: "StrikeX",
@@ -326,53 +350,73 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Senior Full-Stack Developer",
-      logoUrl: "/projects/strikex.png",
+      logoUrl: "/experience/strikex.jpg",
       start: "Mar 2022",
       end: "Jun 2023",
-      description:
-        "Delivered 15+ highly responsive user interfaces using React.js, Next.js, and modern JavaScript frameworks, increasing engagement by 35%. Created and refined multichain wallet interfaces for managing cryptocurrency assets, boosting transaction efficiency by 30% and supporting 10,000+ users. Conducted 50+ code reviews, authored technical documentation, and mentored junior developers, enhancing team productivity by 20%.",
+      description: [
+        "Delivered 15+ highly responsive user interfaces using React.js, Next.js, and modern JavaScript frameworks, increasing engagement by 35%.",
+        "Created and refined multichain wallet interfaces for managing cryptocurrency assets, boosting transaction efficiency by 30% and supporting 10,000+ users.",
+        "Conducted 50+ code reviews, authored technical documentation, and mentored junior developers, enhancing team productivity by 20%.",
+      ],
     },
     {
-      company: "S-PRO",
-      href: "https://s-pro.io/",
+      company: "Sollectify",
+      href: "https://sollectify.com/",
       badges: [],
-      location: "Ukraine",
-      title: "Senior Frontend Developer",
-      logoUrl: "/projects/s-pro.jpg",
-      start: "Nov 2020",
-      end: "Dec 2021",
-      description:
-        "Led the development of highly responsive and scalable front-end solutions for fintech and healthcare applications using React.js, TypeScript, and Redux. Implemented robust unit and integration testing using Jest and React Testing Library, ensuring high code quality and reliability. Mentored junior developers and conducted code reviews, fostering a culture of continuous improvement and knowledge sharing.",
-    },
-    {
-      company: "Light IT",
-      href: "https://light-it.net/",
-      badges: [],
-      location: "Ukraine",
-      title: "Junior Frontend Engineer",
-      logoUrl: "/projects/light-it.jpg",
-      start: "May 2019",
-      end: "Oct 2020",
-      description:
-        "Collaborated with the development team to build responsive and user-friendly interfaces using HTML, CSS, and JavaScript.Implemented RESTful API integrations to dynamically display data on the front end. Conducted performance optimization to improve page loading speeds and responsiveness.",
+      location: "Remote",
+      title: "Blockchain/Rust Developer",
+      logoUrl: "/experience/sollectify.jpg",
+      start: "Mar 2021",
+      end: "Apr 2022",
+      description: [
+        "Developed and deployed secure smart contracts on Solana and other blockchain networks, ensuring efficient and scalable decentralized applications.",
+        "Integrated Web3 technologies with frontend frameworks to create seamless user experiences for NFT marketplaces and decentralized platforms.",
+        "Optimized smart contract performance, reducing gas fees by up to 20% while maintaining high security and functionality standards.",
+        "Collaborated with cross-functional teams to design blockchain-based solutions, leveraging token standards like Metaplex and SPL.",
+        "Conducted code audits and implemented best practices, mitigating vulnerabilities and ensuring compliance with industry standards.",
+      ],
     },
   ],
   education: [
     {
+      school: "University of Southern California",
+      href: "https://www.usc.edu/",
+      degree: "Bachelor's Degree of Computer Science (BCS)",
+      logoUrl: "/education/usc.webp",
+      start: "2015",
+      end: "2019",
+    },
+    {
       school: "Buildspace",
       href: "https://buildspace.so",
       degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
+      logoUrl: "/education/buildspace.jpg",
       start: "2023",
       end: "2024",
     },
     {
-      school: "Taras Shevchenko National University of Kyiv",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2015",
-      end: "2019",
+      school: "Coursera",
+      href: "https://coursera.org",
+      degree: "Certified Blockchain Expert (CBE)",
+      logoUrl: "/education/coursera.png",
+      start: "2023",
+      end: "2024",
+    },
+    {
+      school: "ICB",
+      href: "https://coursera.org",
+      degree: "Rust + Solana Developer",
+      logoUrl: "/education/icb.svg",
+      start: "2023",
+      end: "2024",
+    },
+    {
+      school: "Consensys Academy",
+      href: "https://consensys.org",
+      degree: "Ethereum Developer Certification",
+      logoUrl: "/education/consensys_academy.jpeg",
+      start: "2023",
+      end: "2024",
     },
   ],
   projects: [

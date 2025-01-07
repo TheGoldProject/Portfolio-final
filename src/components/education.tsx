@@ -21,7 +21,7 @@ export default function Education() {
             <div className="flex justify-between">
               <div className="flex items-center gap-3">
                 <Image
-                  src={MyImg}
+                  src={item.logoUrl}
                   width={60}
                   height={60}
                   alt="me"

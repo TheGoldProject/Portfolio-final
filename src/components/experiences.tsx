@@ -17,7 +17,7 @@ export default function Experiences() {
   return (
     <div className="flex flex-col items-center justify-center relative bg-background mt-20">
       <GradualSpacing
-        className="font-display text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
+        className="font-display text-3xl font-bold py-10 -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Work Experience"
       />
       <div className={"flex flex-col gap-10 w-1/2"}>
@@ -30,23 +30,27 @@ export default function Experiences() {
             <div className="flex justify-between">
               <div className="flex items-center gap-3">
                 <Image
-                  src={MyImg}
+                  src={item.logoUrl}
                   width={60}
                   height={60}
                   alt="me"
-                  className="rounded-full"
+                  className="rounded-full shadow-xl bg-zinc-800"
                 />
                 <div className="flex flex-col">
-                  <span className="text-[24px]">Gempad</span>
-                  <span className="text-sm">Senior Fullstack Engineer</span>
+                  <span className="text-[24px]">{item.company}</span>
+                  <span className="text-md">{item.title}</span>
                 </div>
               </div>
               <div className="flex flex-col items-end">
-                <span className="text-[16px]">2012.5.6 - 2015.4.6</span>
-                <span className="text-sm">Remote</span>
+                <span className="text-[16px]">{item.start} - {item.end}</span>
+                <span className="text-sm">{item.location}</span>
               </div>
             </div>
-            <div className="mt-5">{item.description}</div>
+            <ul className="mt-5 list-disc pl-5">
+              {item.description.map((desc, i) => (
+                <li key={i}>{desc}</li>
+              ))}
+            </ul>
           </MagicCard>
         ))}
       </div>

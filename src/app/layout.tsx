@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Geist, Geist_Mono, Inter as FontSans } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -69,14 +70,15 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased w-full mx-auto pb-12 sm:pb-24",
+            "min-h-screen bg-background font-sans antialiased w-full mx-auto",
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="dark">
+          <ThemeProvider attribute="class" defaultTheme="light">
             <TooltipProvider delayDuration={0}>
               {children}
               <Navbar />
+              <Footer />
             </TooltipProvider>
           </ThemeProvider>
         </body>

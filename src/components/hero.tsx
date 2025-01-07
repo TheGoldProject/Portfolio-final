@@ -17,6 +17,7 @@ import { Mail, SquareArrowOutUpRight } from "lucide-react";
 import { Link, useTransitionRouter } from "next-view-transitions";
 import { slideInOut } from "@/lib/transition-animations";
 import TextReveal from "@/components/ui/text-reveal";
+import { WarpBackground } from "@/components/ui/warp-background";
 
 export default function Hero() {
   const router = useTransitionRouter();
@@ -82,7 +83,7 @@ export default function Hero() {
           </BlurFade>
         </div>
         <FlickeringGrid
-          className="z-0 absolute inset-0 size-full [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
+          className="z-0 absolute inset-0 size-full [mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]"
           squareSize={4}
           gridGap={6}
           color="#6B7280"

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import Marquee from "@/components/ui/marquee";
 import { Star, StarIcon, Stars } from "lucide-react";
-import IconCloud from "@/components/ui/icon-cloud";
+import { IconCloud } from "@/components/ui/icon-cloud";
 import {
   Tooltip,
   TooltipContent,
@@ -63,6 +63,9 @@ const DATA: { skills: Skills } = {
   },
 };
 export default function Skills() {
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  );
   return (
     <div id="skill" className="relative bg-background pt-40 overflow-hidden">
       <div className="flex flex-col items-center">
@@ -83,9 +86,9 @@ export default function Skills() {
             </span>
           </div>
         </BlurFade>
-        <div className="flex justify-start gap-10">
+        <div className="flex items-center justify-start gap-10 mt-10">
           <div className="flex flex-col items-start gap-5 w-full">
-            <div className="flex flex-wrap gap-10 max-w-[800px]">
+            <div className="flex flex-wrap gap-8 max-w-[800px]">
               {Object.keys(DATA.skills).map((category: string, i: number) => {
                 return (
                   <div
@@ -108,10 +111,18 @@ export default function Skills() {
 
                             <Image
                               src={`/skills/${item}.svg`}
-                              width={50}
-                              height={50}
+                              width={44}
+                              height={44}
                               alt={item}
-                              className="hover:cursor-pointer"
+                              className={`hover:cursor-pointer ${
+                                item === "Next" ||
+                                item === "Rust" ||
+                                item === "Github" ||
+                                item === "Express" ||
+                                item === "Solidity"
+                                  ? "dark:invert"
+                                  : ""
+                              }`}
                             />
                           </TooltipTrigger>
                           <TooltipContent>
@@ -125,9 +136,9 @@ export default function Skills() {
               })}
             </div>
           </div>
-          {/* <div className="max-w-md">
-            <IconCloud iconSlugs={slugs} />
-          </div> */}
+          <div className="scale-125">
+            <IconCloud images={images} />
+          </div>
         </div>
       </div>
 
