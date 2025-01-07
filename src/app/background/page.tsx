@@ -5,7 +5,7 @@ import Education from "@/components/education";
 import Certifications from "@/components/certifications";
 import Projects from "@/components/projects";
 
-export default function Home() {
+export default function Background() {
   return (
     <div className="min-h-screen gap-16 font-[family-name:var(--font-geist-sans)]">
      {/* <Hero /> */}

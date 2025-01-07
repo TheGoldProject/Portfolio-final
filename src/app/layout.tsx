@@ -7,6 +7,7 @@ import { Geist, Geist_Mono, Inter as FontSans } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -81,6 +82,14 @@ export default function RootLayout({
               <Footer />
             </TooltipProvider>
           </ThemeProvider>
+          <Script
+            src="https://automatic.chat/embed.js"
+            id="cm5lroqih003zn73swpicgmm0"
+            async
+            strategy="afterInteractive"
+            data-open="true"
+            data-open-delay="5000"
+          />
         </body>
       </html>
     </ViewTransitions>

@@ -79,8 +79,13 @@ export default function Testimonial() {
           </span>
         </BlurFade>
       </div>
-      <div className="flex flex-col w-full items-center justify-center overflow-hidden rounded-lg bg-background h-[300px]">
+      <div className="flex flex-col w-full items-center justify-center overflow-hidden rounded-lg bg-background">
         <Marquee className="[--duration:20s]">
+          {DATA.testimonials.map((review) => (
+            <ReviewCard key={review.name} {...review} />
+          ))}
+        </Marquee>
+        <Marquee reverse className="[--duration:20s]">
           {DATA.testimonials.map((review) => (
             <ReviewCard key={review.name} {...review} />
           ))}

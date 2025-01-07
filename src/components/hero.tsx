@@ -73,13 +73,14 @@ export default function Hero() {
             </div>
           </div>
           <BlurFade delay={0.25} inView>
-            <Image
-              src={DATA.avatarUrl}
-              width={300}
-              height={300}
-              className="rounded-full"
-              alt="me"
-            />
+            <div className="w-80 h-80">
+              <Image
+                src={DATA.avatarUrl}
+                fill
+                className="rounded-full object-cover"
+                alt="me"
+              />
+            </div>
           </BlurFade>
         </div>
         <FlickeringGrid

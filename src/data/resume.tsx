@@ -7,7 +7,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 const GITHUB_URL = "https://github.com/alphaweb3savvy";
-const LINKEDIN_URL = "https://www.linkedin.com/in/alphaweb3savvy";
+const LINKEDIN_URL = "https://www.linkedin.com/in/ethan-alphaweb3";
 const TELEGRAM_URL = "https://t.me/goldendev726";
 const EMAIL_URL = "alphaweb3.savvy@gmail.com";
 const RESUME_URL = "https://bit.ly/alphaweb3savvy-resume";
@@ -20,11 +20,11 @@ export const DATA = {
   location: "San Gabriel, CA",
   locationLink: "https://www.google.com/maps/place/sangabriel",
   description:
-    // "I am passionate about developing innovative solutions on decentralized networks, such as blockchain, and have strong expertise in creating engaging and dynamic front-end experiences for websites."
-    "I love building things on decentralized networks, such as blockchain. Also have strong expertise in creating engaging and dynamic front-end experiences for websites.",
+    "I am passionate about developing innovative solutions on decentralized networks, such as blockchain, and have strong expertise in creating engaging and dynamic front-end experiences for websites.",
+  // "I love building things on decentralized networks, such as blockchain. Also have strong expertise in creating engaging and dynamic front-end experiences for websites.",
   summary:
     "At the end of 2024, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/avatar/yurii2.jpg",
+  avatarUrl: "/avatar/gif-avatar.gif",
   // skills: [
   //   "React.js",
   //   "Next.js",
@@ -421,120 +421,141 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Gamma - Liquidity management platform",
+      href: "https://gamma.xyz",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "The Gamma platform is a decentralized finance (DeFi) protocol designed to provide efficient and secure trading and management of digital assets on the blockchain.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "Solidity",
+        "Ethers.js",
+        "Web3Auth",
+        "Hardhat",
+        "React.js",
+        "Redux",
+        "MUI",
+        "React Query",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "https://gamma.xyz",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/gamma.png",
+      video:
+        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+    },
+    {
+      title: "SunContract - NFT-Powered Energy Trading System",
+      href: "https://suncontract.org/",
+      active: true,
+      description:
+        "A platform that leverages blockchain technology to enable peer-to-peer energy trading, promoting renewable energy usage and efficiency.",
+      technologies: [
+        "Solidity",
+        "Polygon",
+        "React.js",
+        "Typescript",
+        "Web3.js",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://suncontract.org/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://suncontract.org/",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/suncontract.png",
+      video: "https://cdn.magicui.design/bento-grid.mp4",
+    },
+    {
+      title: "Sede Blockchain - Assets Tokenization",
+      href: "https://sedeblockchain.com/",
+      active: true,
+      description:
+        "A gateway to blockchain solutions, offering services in crypto custody, asset tokenization, and blockchain networks, with a focus on simplicity and sophistication in digital currency.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "React.js",
+        "Solidity",
+        "The Graph",
+        "Ethers.js",
+        "Web3.js",
+        "IPFS",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://sedeblockchain.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://sedeblockchain.com/",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/projects/sedeblockchain.png",
+      video: "https://cdn.llm.report/openai-demo.mp4",
+    },
+    {
+      title: "Benqi - Avalanche DeFi platform",
+      href: "https://app.benqi.fi/",
+      active: true,
+      description:
+        "Benqi is a decentralized finance (DeFi) platform built on the Avalanche blockchain, offering users the ability to lend, borrow, and earn interest on their crypto assets with high efficiency and low fees.",
+      technologies: [
+        "React.js",
+        "Ethers.js",
+        "Web3.js",
+        "Solidity",
+        "Hardhat",
+        "Avalanche",
+        "Ethereum",
+        "Node.js",
+        "TailwindCSS",
+        "Express",
+        "MongoDB",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://app.benqi.fi/",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Mirror Protocol - DEX platform",
+      href: "https://dashboard.themirrorprotocol.com/",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "Mirror Protocol enables users to create and trade synthetic assets on the Terra blockchain, offering exposure to real-world assets like stocks and commodities in a decentralized manner.",
       technologies: [
+        "Terra SDK",
+        "Cosmos",
+        "Rust",
+        "React.js",
         "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "TypeScript",
+        "Redux Toolkit",
+        "ethers.js",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
-      active: true,
-      description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
-    {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
-      active: true,
-      description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
+          href: "https://dashboard.themirrorprotocol.com/",
           icon: <Icons.globe className="size-3" />,
         },
       ],

@@ -35,7 +35,7 @@ export default function Footer() {
             className="hover:cursor-pointer dark:invert"
           />,
           <Image
-            src="/skills/Typescript.svg"
+            src="/skills/TypeScript.svg"
             width={16}
             height={16}
             alt="Typescript"
