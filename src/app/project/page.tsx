@@ -30,8 +30,9 @@ export default function Project() {
         </BlurFade>
 
         <div className="flex flex-col gap-5 mt-10">
-          {DATA.projects.map((project: any) => (
+          {DATA.projects.map((project: any, i: number) => (
             <ShineBorder
+              key={i}
               className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
               color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
             >
@@ -48,8 +49,8 @@ export default function Project() {
                   <h1 className="text-2xl font-bold">{project.title}</h1>
                   <p className="text-lg text-gray-500">{project.description}</p>
                   <div className="flex flex-wrap gap-3">
-                    {project.technologies.map((technology: any) => (
-                      <p className="text-sm text-gray-500 rounded-3xl border px-2 py-1 border-zinc-600 shadow-2xl">
+                    {project.technologies.map((technology: any, j: number) => (
+                      <p key={j} className="text-sm text-gray-500 rounded-3xl border px-2 py-1 border-zinc-600 shadow-2xl">
                         {technology}
                       </p>
                     ))}

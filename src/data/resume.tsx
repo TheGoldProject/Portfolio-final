@@ -351,8 +351,8 @@ export const DATA = {
       location: "Remote",
       title: "Senior Full-Stack Developer",
       logoUrl: "/experience/strikex.jpg",
-      start: "Mar 2022",
-      end: "Jun 2023",
+      start: "Jun 2021",
+      end: "Mar 2022",
       description: [
         "Delivered 15+ highly responsive user interfaces using React.js, Next.js, and modern JavaScript frameworks, increasing engagement by 35%.",
         "Created and refined multichain wallet interfaces for managing cryptocurrency assets, boosting transaction efficiency by 30% and supporting 10,000+ users.",
@@ -366,8 +366,8 @@ export const DATA = {
       location: "Remote",
       title: "Blockchain/Rust Developer",
       logoUrl: "/experience/sollectify.jpg",
-      start: "Mar 2021",
-      end: "Apr 2022",
+      start: "Mar 2020",
+      end: "Apr 2021",
       description: [
         "Developed and deployed secure smart contracts on Solana and other blockchain networks, ensuring efficient and scalable decentralized applications.",
         "Integrated Web3 technologies with frontend frameworks to create seamless user experiences for NFT marketplaces and decentralized platforms.",
@@ -383,8 +383,8 @@ export const DATA = {
       href: "https://www.usc.edu/",
       degree: "Bachelor's Degree of Computer Science (BCS)",
       logoUrl: "/education/usc.webp",
-      start: "2015",
-      end: "2019",
+      start: "Jun 2006",
+      end: "May 2010",
     },
     {
       school: "Buildspace",
