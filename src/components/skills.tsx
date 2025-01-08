@@ -45,7 +45,7 @@ type Skills = {
 
 const DATA: { skills: Skills } = {
   skills: {
-    Languages: ["JavaScript", "TypeScript", "Solidity", "Rust", "Python"],
+    Languages: ["Javascript", "Typescript", "Solidity", "Rust", "Python"],
     Blockchain: [
       "OpenZeppelin",
       "Ethereum",
