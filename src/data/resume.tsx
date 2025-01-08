@@ -24,7 +24,7 @@ export const DATA = {
   // "I love building things on decentralized networks, such as blockchain. Also have strong expertise in creating engaging and dynamic front-end experiences for websites.",
   summary:
     "At the end of 2024, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/avatar/gif-avatar.gif",
+  avatarUrl: "/avatar/me_full.png",
   // skills: [
   //   "React.js",
   //   "Next.js",
@@ -532,7 +532,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/benqi.jpg",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
@@ -559,7 +559,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/projects/mirrorprotocol.png",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },

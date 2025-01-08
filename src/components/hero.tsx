@@ -72,16 +72,19 @@ export default function Hero() {
               </BlurFade>
             </div>
           </div>
-          <BlurFade delay={0.25} inView>
-            <div className="w-80 h-80">
-              <Image
-                src={DATA.avatarUrl}
-                fill
-                className="rounded-full object-cover"
-                alt="me"
-              />
-            </div>
-          </BlurFade>
+          <div className="relative w-[480px] h-[480px] overflow-hidden">
+            <Image
+              src={DATA.avatarUrl}
+              width={500}
+              height={500}
+              alt="me"
+              layout="fixed"
+              className="max-w-[unset] absolute top-10"
+            />
+          </div>
+          {/* <BlurFade delay={0.25} inView>
+           
+          </BlurFade> */}
         </div>
         <FlickeringGrid
           className="z-0 absolute inset-0 size-full [mask-image:radial-gradient(1000px_circle_at_center,white,transparent)]"
@@ -100,7 +103,10 @@ export default function Hero() {
         />
       </BlurFade> */}
       <div className="z-10 flex min-h-64 items-center justify-center border-y border-neutral-50 dark:border-neutral-800/80 bg-white dark:bg-black">
-        <TextReveal text="Magic UI will change the way you design.Magic UI will change the way you design.Magic UI will change the way you design.Magic UI will change the way you design.Magic UI will change the way you design.Magic UI will change the way you design.z" />
+        {/* I excel at working collaboratively with teams and continuously stay updated on industry trends to deliver innovative and impactful blockchain solutions. */}
+        <TextReveal
+          text="I thrive in collaborative environments and stay current with industry trends to ensure the delivery of cutting-edge solutions that promote blockchain adoption."
+        />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
@@ -12,10 +12,16 @@ import {
   SiGmail,
   SiWhatsapp,
 } from "@icons-pack/react-simple-icons";
+import { CheckIcon, ChevronRightIcon } from "lucide-react";
 import { Icons } from "@/components/icons";
 import BlurFade from "@/components/ui/blur-fade";
 import { DATA } from "@/data/resume";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "./ui/textarea";
+import { AnimatedSubscribeButton } from "@/components/ui/animated-subscribe-button";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -46,6 +52,50 @@ export default function Contact() {
   const div6Ref = useRef<HTMLDivElement>(null);
   const div7Ref = useRef<HTMLDivElement>(null);
 
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSend = async () => {
+    if (!formData.email || !formData.name || !formData.message) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      await emailjs.send(
+        "My Gmail", // Replace with your EmailJS service ID
+        "template_snexjqb", // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "IZ4V5Y3fyRMgK2YKr" // Replace with your EmailJS public key
+      );
+      alert("Message sent successfully!");
+      setFormData({ email: "", name: "", message: "" }); // Clear form
+    } catch (err) {
+      console.error("Failed to send message:", err);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <div
       id="contact"
@@ -67,16 +117,38 @@ export default function Contact() {
       >
         Get in touch
       </BlurFade>
-      <div className="flex items-center gap-20">
-        <BlurFade delay={2} inView>
-          <div className="flex flex-col text-neutral-500">
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
+      <div className="flex items-center gap-20 mt-5">
+        <div className="flex flex-col gap-4 w-2/3">
+          <div className="flex gap-2">
+            <Input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Email"
+              className="h-12 text-lg"
+            />
+            <Input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              placeholder="Name"
+              className="h-12 text-lg"
+            />
           </div>
-        </BlurFade>
+          <Textarea
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            placeholder="Message"
+            rows={8}
+            className="h-40 text-lg"
+          />
+          <Button onClick={handleSend} disabled={isLoading}>
+            {isLoading ? "Sending..." : "Send"}
+          </Button>
+        </div>
         <BlurFade
           delay={1}
           inView
@@ -103,7 +175,7 @@ export default function Contact() {
                 </Circle>
                 <Circle ref={div4Ref} className="size-16 p-0">
                   <Image
-                    src={DATA.avatarUrl}
+                    src="/avatar/me.png"
                     alt="me"
                     width={50}
                     height={50}
@@ -165,15 +237,6 @@ export default function Contact() {
               endYOffset={10}
               reverse
             />
-          </div>
-        </BlurFade>
-        <BlurFade delay={2} inView>
-          <div className="flex flex-col text-neutral-500">
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
-            <span>Linkedin: </span>
           </div>
         </BlurFade>
       </div>
