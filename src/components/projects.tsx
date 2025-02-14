@@ -6,6 +6,7 @@ import Image from "next/image";
 import MyImg from "/public/projects/gempad.png";
 import InteractiveHoverButton from "@/components/ui/interactive-hover-button";
 import BlurFade from "@/components/ui/blur-fade";
+import Link from "next/link";
 const features = [
   {
     Icon: StarIcon,
@@ -14,13 +15,7 @@ const features = [
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1 h-[400px]",
-    background: (
-      <Image
-        src={MyImg}
-        alt="me"
-        className="absolute overflow-hidden !blur-[0px]"
-      />
-    ),
+    background: <Image src={MyImg} alt="me" className="absolute overflow-hidden !blur-[0px]" />,
   },
   {
     Icon: HeartIcon,
@@ -61,21 +56,18 @@ export default function Projects() {
       >
         Featured Projects
       </BlurFade>
-      <BlurFade
-        className="text-center text-neutral-900 dark:text-neutral-500"
-        delay={0.25}
-        inView
-      >
-        I've worked on a variety of projects, from simple websites to complex{" "}
-        <br />
+      <BlurFade className="text-center text-neutral-900 dark:text-neutral-500" delay={0.25} inView>
+        I've worked on a variety of projects, from simple websites to complex <br />
         web applications. Here are a few of my favorites.
       </BlurFade>
       <BentoGrid className="my-10 lg:grid-rows-2 w-1/2">
-        {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
+        {DATA.projects.slice(0, 4).map((project, index) => (
+          <BentoCard key={index} {...project} />
         ))}
       </BentoGrid>
-      <InteractiveHoverButton text="Browse All Projects" className="w-72" />
+      <Link href="/project">
+        <InteractiveHoverButton text="Browse All Projects" className="w-72" />
+      </Link>
     </div>
   );
 }

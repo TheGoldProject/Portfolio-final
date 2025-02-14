@@ -1,16 +1,12 @@
 import { cn } from "@/lib/utils";
+import SectionContainer from "@/components/section-container";
 import { DATA } from "@/data/resume";
 import GradualSpacing from "@/components/ui/gradual-spacing";
-import Marquee from "@/components/ui/marquee";
-import { Star, StarIcon, Stars } from "lucide-react";
-import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";
-import NumberTicker from "@/components/ui/number-ticker";
-import MyImg from "/public/avatar/me.jpg";
 import Image from "next/image";
 
 export default function Education() {
   return (
-    <div id="education" className="flex flex-col items-center justify-center relative bg-background mt-20">
+    <SectionContainer id="education">
       <GradualSpacing
         className="font-display text-3xl font-bold -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Education"
@@ -18,7 +14,7 @@ export default function Education() {
       <div className={"flex flex-col gap-10 w-1/2"}>
         {DATA.education.map((item, i) => (
           <div key={i}>
-            <div className="flex justify-between">
+            <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <Image
                   src={item.logoUrl}
@@ -33,12 +29,14 @@ export default function Education() {
                 </div>
               </div>
               <div className="flex flex-col items-end">
-                <span className="text-[16px]">2012.5.6 - 2015.4.6</span>
+                <span className="text-base text-muted-foreground">
+                  {item.start} - {item.end}
+                </span>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </SectionContainer>
   );
 }

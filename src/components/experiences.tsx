@@ -3,10 +3,7 @@ import { cn } from "@/lib/utils";
 import { DATA } from "@/data/resume";
 import { useTheme } from "next-themes";
 import GradualSpacing from "@/components/ui/gradual-spacing";
-import Marquee from "@/components/ui/marquee";
-import { Star, StarIcon, Stars } from "lucide-react";
-import AnimatedCircularProgressBar from "@/components/ui/animated-circular-progress-bar";
-import NumberTicker from "@/components/ui/number-ticker";
+import SectionContainer from "@/components/section-container";
 import { MagicCard } from "@/components/ui/magic-card";
 import Image from "next/image";
 import MyImg from "/public/avatar/me.jpg";
@@ -15,7 +12,7 @@ import ShineBorder from "@/components/ui/shine-border";
 export default function Experiences() {
   const { theme } = useTheme();
   return (
-    <div className="flex flex-col items-center justify-center relative bg-background mt-20">
+    <SectionContainer id="work">
       <GradualSpacing
         className="font-display text-3xl font-bold py-10 -tracking-widest  text-black dark:text-white md:text-5xl md:leading-[5rem]"
         text="Work Experience"
@@ -42,7 +39,9 @@ export default function Experiences() {
                 </div>
               </div>
               <div className="flex flex-col items-end">
-                <span className="text-[16px]">{item.start} - {item.end}</span>
+                <span className="text-[16px]">
+                  {item.start} - {item.end}
+                </span>
                 <span className="text-sm">{item.location}</span>
               </div>
             </div>
@@ -54,6 +53,6 @@ export default function Experiences() {
           </MagicCard>
         ))}
       </div>
-    </div>
+    </SectionContainer>
   );
 }

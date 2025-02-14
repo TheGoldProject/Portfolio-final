@@ -35,7 +35,7 @@ export default function Footer() {
             className="hover:cursor-pointer dark:invert"
           />,
           <Image
-            src="/skills/TypeScript.svg"
+            src="/skills/Typescript.svg"
             width={16}
             height={16}
             alt="Typescript"
@@ -49,7 +49,7 @@ export default function Footer() {
             className="hover:cursor-pointer"
           />
         </div>
-        by Alphaweb3Savvy.
+        by ByteAssembler.
       </div>
     </div>
   );

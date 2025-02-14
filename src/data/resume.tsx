@@ -1,23 +1,20 @@
 import { Icons } from "@/components/icons";
 import { FileText, HomeIcon, NotebookIcon } from "lucide-react";
-import {
-  SiTelegram,
-  SiGithub,
-  SiLinkedin,
-} from "@icons-pack/react-simple-icons";
+import { SiTelegram, SiGithub, SiLinkedin, SiDiscord } from "@icons-pack/react-simple-icons";
 
-const GITHUB_URL = "https://github.com/alphaweb3savvy";
-const LINKEDIN_URL = "https://www.linkedin.com/in/ethan-alphaweb3";
-const TELEGRAM_URL = "https://t.me/goldendev726";
-const EMAIL_URL = "alphaweb3.savvy@gmail.com";
-const RESUME_URL = "https://bit.ly/alphaweb3savvy-resume";
-const PORTFOLIO_URL = "https://alphaweb3savvy.vercel.app";
+const GITHUB_URL = "https://github.com/byteassemble";
+const LINKEDIN_URL = "https://www.linkedin.com/in/sebastianwagiel";
+const TELEGRAM_URL = "https://t.me/byteassembler";
+const DISCORD_URL = "https://discord.gg/cA98uDvC";
+const EMAIL_URL = "swagiel.work@gmail.com";
+const RESUME_URL = "https://bit.ly/byteassembler-resume";
+const PORTFOLIO_URL = "https://sebastianwagiel.vercel.app";
 
 export const DATA = {
-  name: "Ethan Zhang",
-  initials: "DV",
+  name: "Sebastian Wagiel",
+  initials: "SW",
   url: PORTFOLIO_URL,
-  location: "San Gabriel, CA",
+  location: "Krzeszów, Lesser Poland, Poland",
   locationLink: "https://www.google.com/maps/place/sangabriel",
   description:
     "I am passionate about developing innovative solutions on decentralized networks, such as blockchain, and have strong expertise in creating engaging and dynamic front-end experiences for websites.",
@@ -271,41 +268,36 @@ export const DATA = {
   ],
   contact: {
     email: EMAIL_URL,
-    tel: "+123456789",
+    phone: "+48519502766",
     social: {
       GitHub: {
         name: "GitHub",
         url: GITHUB_URL,
         icon: Icons.github,
-
         navbar: true,
       },
       Telegram: {
         name: "Telegram",
         url: TELEGRAM_URL,
         icon: SiTelegram,
-
         navbar: true,
       },
-      // Discord: {
-      //   name: "Discord",
-      //   url: "https://github.com/TheGoldProject",
-      //   icon: Icons.github,
-
-      //   navbar: true,
-      // },
+      Discord: {
+        name: "Discord",
+        url: DISCORD_URL,
+        icon: SiDiscord,
+        navbar: true,
+      },
       LinkedIn: {
         name: "LinkedIn",
         url: LINKEDIN_URL,
         icon: Icons.linkedin,
-
         navbar: true,
       },
       email: {
         name: "Send Email",
         url: EMAIL_URL,
         icon: Icons.email,
-
         navbar: false,
       },
     },
@@ -316,6 +308,7 @@ export const DATA = {
     { href: TELEGRAM_URL, label: "Telegram", icon: SiTelegram },
     { href: LINKEDIN_URL, label: "LinkedIn", icon: SiLinkedin },
     { href: GITHUB_URL, label: "GitHub", icon: SiGithub },
+    { href: DISCORD_URL, label: "Discord", icon: SiDiscord },
   ],
 
   links: {
@@ -323,6 +316,7 @@ export const DATA = {
     telegram: TELEGRAM_URL,
     linkedin: LINKEDIN_URL,
     github: GITHUB_URL,
+    discord: DISCORD_URL,
   },
 
   work: [
@@ -359,71 +353,87 @@ export const DATA = {
         "Conducted 50+ code reviews, authored technical documentation, and mentored junior developers, enhancing team productivity by 20%.",
       ],
     },
-    {
-      company: "Sollectify",
-      href: "https://sollectify.com/",
-      badges: [],
-      location: "Remote",
-      title: "Blockchain/Rust Developer",
-      logoUrl: "/experience/sollectify.jpg",
-      start: "Mar 2020",
-      end: "Apr 2021",
-      description: [
-        "Developed and deployed secure smart contracts on Solana and other blockchain networks, ensuring efficient and scalable decentralized applications.",
-        "Integrated Web3 technologies with frontend frameworks to create seamless user experiences for NFT marketplaces and decentralized platforms.",
-        "Optimized smart contract performance, reducing gas fees by up to 20% while maintaining high security and functionality standards.",
-        "Collaborated with cross-functional teams to design blockchain-based solutions, leveraging token standards like Metaplex and SPL.",
-        "Conducted code audits and implemented best practices, mitigating vulnerabilities and ensuring compliance with industry standards.",
-      ],
-    },
   ],
   education: [
     {
-      school: "University of Southern California",
-      href: "https://www.usc.edu/",
+      school: "Silesian University of Technology",
+      href: "https://www.sut.edu.pl/",
       degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/education/usc.webp",
-      start: "Jun 2006",
-      end: "May 2010",
+      logoUrl: "/education/sut.jpg",
+      start: "Oct 2019",
+      end: "Feb 2023",
     },
     {
       school: "Buildspace",
       href: "https://buildspace.so",
       degree: "s3, s4, sf1, s5",
       logoUrl: "/education/buildspace.jpg",
-      start: "2023",
-      end: "2024",
+      start: "Apr 2021",
+      end: "Jan 2022",
     },
     {
       school: "Coursera",
       href: "https://coursera.org",
       degree: "Certified Blockchain Expert (CBE)",
       logoUrl: "/education/coursera.png",
-      start: "2023",
-      end: "2024",
+      start: "Mar 2022",
+      end: "Jul 2022",
     },
     {
       school: "ICB",
       href: "https://coursera.org",
       degree: "Rust + Solana Developer",
       logoUrl: "/education/icb.svg",
-      start: "2023",
-      end: "2024",
+      start: "Aug 2022",
+      end: "Nov 2022",
     },
     {
       school: "Consensys Academy",
       href: "https://consensys.org",
       degree: "Ethereum Developer Certification",
       logoUrl: "/education/consensys_academy.jpeg",
-      start: "2023",
-      end: "2024",
+      start: "Feb 2023",
+      end: "May 2023",
     },
   ],
   projects: [
     {
-      title: "Gamma - Liquidity management platform",
+      title: "TG Lux Stay",
+      href: "https://tgluxstay.com",
+      active: true,
+      shortDescription: "Villa Booking Platform",
+      description:
+        "TG Lux Stay is a platform that allows users to book luxury stays in the most popular destinations around the world.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "React.js",
+        "Redux",
+        "MUI",
+        "TailwindCSS",
+        "React Query",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "AWS",
+        "Git",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://tgluxstay.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/tgluxstay.png",
+      video: "/projects/tgluxstay.webm",
+      className: "col-span-3 lg:col-span-2 h-[400px]",
+    },
+    {
+      title: "Gamma",
       href: "https://gamma.xyz",
       active: true,
+      shortDescription: "Liquidity management platform",
       description:
         "The Gamma platform is a decentralized finance (DeFi) protocol designed to provide efficient and secure trading and management of digital assets on the blockchain.",
       technologies: [
@@ -444,22 +454,18 @@ export const DATA = {
         },
       ],
       image: "/projects/gamma.png",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      className: "col-span-3 lg:col-span-1",
     },
+
     {
-      title: "SunContract - NFT-Powered Energy Trading System",
+      title: "SunContract",
       href: "https://suncontract.org/",
       active: true,
+      shortDescription: "NFT-Powered Energy Trading System",
       description:
         "A platform that leverages blockchain technology to enable peer-to-peer energy trading, promoting renewable energy usage and efficiency.",
-      technologies: [
-        "Solidity",
-        "Polygon",
-        "React.js",
-        "Typescript",
-        "Web3.js",
-      ],
+      technologies: ["Solidity", "Polygon", "React.js", "Typescript", "Web3.js"],
       links: [
         {
           type: "Website",
@@ -474,6 +480,42 @@ export const DATA = {
       ],
       image: "/projects/suncontract.png",
       video: "https://cdn.magicui.design/bento-grid.mp4",
+      className: "col-span-3 lg:col-span-1",
+    },
+    {
+      title: "Gempad",
+      href: "https://gempad.app",
+      active: true,
+      shortDescription: "Token Presale Launchpad",
+      description:
+        "Gempad is one of the most popular presale platforms on the Ethereum and Solana blockchain with many utilities.",
+      technologies: [
+        "Next.js",
+        "Typescript",
+        "React.js",
+        "Redux",
+        "MUI",
+        "TailwindCSS",
+        "Ethers.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Solidity",
+        "Hardhat",
+        "The Graph",
+        "Web3.js",
+        "Web3Auth",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://gempad.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/projects/gempad.png",
+      video: "/projects/gempad.webm",
+      className: "col-span-3 lg:col-span-2",
     },
     {
       title: "Sede Blockchain - Assets Tokenization",
@@ -533,8 +575,7 @@ export const DATA = {
         },
       ],
       image: "/projects/benqi.jpg",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
     {
       title: "Mirror Protocol - DEX platform",
@@ -560,8 +601,7 @@ export const DATA = {
         },
       ],
       image: "/projects/mirrorprotocol.png",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      video: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
     },
   ],
   hackathons: [
@@ -571,8 +611,7 @@ export const DATA = {
       location: "London, Ontario",
       description:
         "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
@@ -582,8 +621,7 @@ export const DATA = {
       location: "Waterloo, Ontario",
       description:
         "Developed a mobile application which delivers university campus wide events in real time to all students.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     },
@@ -594,8 +632,7 @@ export const DATA = {
       description:
         "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
       icon: "public",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
       links: [],
     },
     {
@@ -604,8 +641,7 @@ export const DATA = {
       location: "San Francisco, California",
       description:
         "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
       links: [
         {
           title: "Github",
@@ -620,8 +656,7 @@ export const DATA = {
       location: "Davis, California",
       description:
         "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-davis.png",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-davis.png",
       win: "Best Data Hack",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
       links: [
@@ -653,8 +688,7 @@ export const DATA = {
       location: "Waterloo, Ontario",
       description:
         "Developed a blockchain application for doctors and pharmacists to perform trustless transactions and prevent overdosage in patients.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/eth-waterloo.png",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/eth-waterloo.png",
       links: [
         {
           title: "Organization",
@@ -669,8 +703,7 @@ export const DATA = {
       location: "Waterloo, Ontario",
       description:
         "Developed a virtual reality application allowing users to see themselves in third person.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
       links: [
         {
@@ -691,8 +724,7 @@ export const DATA = {
       location: "Toronto, Ontario",
       description:
         "Developed an open platform for people shipping items to same place to combine shipping costs and save money.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-6ix.jpg",
+      image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-6ix.jpg",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
       links: [
         {
